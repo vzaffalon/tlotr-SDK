@@ -64,7 +64,7 @@ message: a message describing the outcome of the request.
 Types
 This SDK includes the following types:
 
-# types
+# Types
 ApiResponse: describes the shape of the response from the server.
 SDK_ERRORS: enum containing the possible errors returned by the SDK.
 MovieSDKResponsePayload: describes the response payload format for methods that retrieve a single movie.
