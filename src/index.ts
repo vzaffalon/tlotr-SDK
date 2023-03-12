@@ -54,6 +54,18 @@ async function useSdk() {
   } catch (e) {
     console.error(`API request failed: ${e.message}`)
   }
+
+
+  try {
+    const response = await sdk.getMovieQuotesByName(movieName)
+    if (response.success) {
+      console.log(`Quote data: ${JSON.stringify(response.data)}`)
+    } else {
+      console.error(`API error: ${response.message}`)
+    }
+  } catch (e) {
+    console.error(`API request failed: ${e.message}`)
+  }
 }
 
 useSdk()
