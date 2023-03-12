@@ -206,44 +206,24 @@ export class LotrSdk {
 
   async getMovieQuotes(movieId: string): Promise<SDKResponse> {
     const url = `${this.apiUrl}movie/${movieId}/quote`
-    const headers = {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${this.sdkKey}`,
-    }
+    const responseData = await this.makeApiRequest(url)
 
-    for (let i = 0; i < this.retries; i++) {
-      try {
-        const response = await fetch(url, { headers })
-        if (response.ok) {
-          const responseData: APIResponse = await response.json()
-
-          console.log('LotrSdk: Sucessfully retrieved movie quotes')
-
-          return {
-            success: true,
-            data: {
-              quotes: this.mapMovieQuotesApiResponse(responseData),
-            },
-            message: 'Sucessfully retrieved quote data',
-          }
-        } else {
-          console.error(`LotrSdk: API request failed`)
-
-          throw new Error(MOVIE_ERRORS.API_REQUEST_FAILED)
-        }
-      } catch (e) {
-        console.error(`LotrSdk: API request failed: ${e.message}`)
-        if (i === this.retries - 1) {
-          console.error(
-            `LotrSdk: API request failed after ${this.retries} retries`
-          )
-
-          throw new Error(MOVIE_ERRORS.API_REQUEST_FAILED_AFTER_RETRIES)
-        } else {
-          console.warn(`LotrSdk: Retrying in ${this.retryDelay}ms...`)
-          await new Promise((resolve) => setTimeout(resolve, this.retryDelay))
-        }
+    if (responseData.ok) {
+      const responseJson: APIResponse = await responseData.json()
+  
+      console.log('LotrSdk: Sucessfully retrieved movie quotes')
+  
+      return {
+        success: true,
+        data: {
+          quotes: this.mapMovieQuotesApiResponse(responseJson),
+        },
+        message: 'Sucessfully retrieved quote data',
       }
+    } else {
+      console.error(`LotrSdk: API request failed`)
+  
+      throw new Error(MOVIE_ERRORS.API_REQUEST_FAILED)
     }
   }
 }
