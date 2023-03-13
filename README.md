@@ -17,8 +17,9 @@ To test the usage of the sdk a script was created, you can run it with:
 Running test:
 ```npm test```
 
-Deploy new version of package:
+# Deploy new version of package:
 change version in package.json
+compilte typescript with ```tsc```
 use ```npm publish```
 
 # Usage
