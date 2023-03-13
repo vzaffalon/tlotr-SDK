@@ -1,5 +1,6 @@
-import { APIResponse } from '../types/ApiResponse'
-import { Movie } from '../types/Movie'
+import { APIResponse } from "../types/ApiResponse";
+import { Movie } from "../types/Movie";
+
 
 export const mapMovieApiResponse = (responseData: APIResponse): Movie => {
   const data = responseData.docs

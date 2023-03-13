@@ -1,9 +1,5 @@
-import {
-  MovieSDKResponsePayload,
-  MoviesSdkResponsePayload,
-  QuotesSdkResponsePayload,
-} from '../types/SdkResponse'
 import * as API_CALLS from '../api/lotrApi'
+import { MovieSDKResponsePayload, MoviesSdkResponsePayload, QuotesSdkResponsePayload } from '../types/SdkResponse'
 
 export class LotrSdk {
   private sdkKey: string

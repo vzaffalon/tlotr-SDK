@@ -1,5 +1,6 @@
-import { APIResponse } from "../types/ApiResponse"
-import { mapMovieApiResponse } from "./MovieMapper"
+import { mapMovieApiResponse } from "../../mappers/MovieMapper"
+import { APIResponse } from "../../types/ApiResponse"
+
 
 describe('example test', () => {
   // Test case 1

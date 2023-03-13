@@ -1,0 +1,7 @@
+src/tests/
+.env
+src/index.ts
+jest.config.js
+.prettierrc
+design.md
+readme.md

@@ -1,4 +1,4 @@
-import { LotrSdk } from "./LotrSdk";
+import { LotrSdk } from "../../sdk/LotrSdk";
 
 
 // sample API key for testing purposes

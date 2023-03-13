@@ -1,5 +1,5 @@
-import { LotrSdk } from './sdk/LotrSdk'
 import * as dotenv from 'dotenv'
+import { LotrSdk } from 'tlotr-sdk';
 
 //receive env variables
 dotenv.config()

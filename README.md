@@ -17,6 +17,9 @@ npm start
 Running test:
 npm test
 
+package can be installed with:
+npm install tlotr-sdk
+
 # Usage
 Importing:
 import {
@@ -90,3 +93,4 @@ The env variable for the sdk was commited just to facilitate testing. Do not do 
 - Add a monitoring tool
 - Add CI/CD
 - Store sdk key more securely with secrets manager
+- Correctly threat possible API errors responses

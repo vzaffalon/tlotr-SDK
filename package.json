@@ -1,8 +1,8 @@
 {
   "name": "tlotr-sdk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "The lord of the rings API sdk",
+  "main": "src/LotrSdk.ts",
   "scripts": {
     "test": "jest",
     "start": "ts-node src/index.ts"
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "node-fetch": "^2.6.9"
+    "node-fetch": "^2.6.9",
+    "tlotr-sdk": "^1.0.3"
   }
 }

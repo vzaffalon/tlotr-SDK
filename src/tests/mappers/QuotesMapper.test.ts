@@ -1,5 +1,7 @@
-import { mapMovieQuotesApiResponse } from '../mappers/QuotesMapper'
-import { APIResponse } from '../types/ApiResponse'
+import { mapMovieQuotesApiResponse } from "../../mappers/QuotesMapper"
+import { APIResponse } from "../../types/ApiResponse"
+
+
 
 describe('mapMovieQuotesApiResponse', () => {
   test('returns an array of strings with movie quotes', () => {

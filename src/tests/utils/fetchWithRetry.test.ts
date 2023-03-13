@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
-import { SDK_ERRORS } from '../types/SdkErrors'
-import { fetchWithRetry } from './fetchWithRetry'
+import { fetchWithRetry } from '../../utils/fetchWithRetry'
+import { SDK_ERRORS } from '../../types/SdkErrors'
 
 describe('fetchWithRetry', () => {
   const url = 'https://example.com/api'

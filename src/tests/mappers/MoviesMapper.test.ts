@@ -1,6 +1,7 @@
-import { APIResponse } from '../types/ApiResponse'
-import { Movie } from '../types/Movie'
-import { mapMoviesApiResponse } from './MoviesMapper'
+import { mapMoviesApiResponse } from "../../mappers/MoviesMapper"
+import { APIResponse } from "../../types/ApiResponse"
+import { Movie } from "../../types/Movie"
+
 
 describe('mapMoviesApiResponse function', () => {
   it('correctly maps single movie response data to Movie type', () => {

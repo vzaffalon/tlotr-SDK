@@ -3,11 +3,7 @@ import { mapMoviesApiResponse } from '../mappers/MoviesMapper'
 import { mapMovieQuotesApiResponse } from '../mappers/QuotesMapper'
 import { APIResponse } from '../types/ApiResponse'
 import { SDK_ERRORS } from '../types/SdkErrors'
-import {
-  MovieSDKResponsePayload,
-  MoviesSdkResponsePayload,
-  QuotesSdkResponsePayload,
-} from '../types/SdkResponse'
+import { MovieSDKResponsePayload, MoviesSdkResponsePayload, QuotesSdkResponsePayload } from '../types/SdkResponse'
 import { fetchWithRetry } from '../utils/fetchWithRetry'
 
 export const getMovieQuotes = async (
