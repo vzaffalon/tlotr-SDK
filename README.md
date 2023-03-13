@@ -86,6 +86,9 @@ node-fetch: for making HTTP requests.
 # ENV variables
 The env variable for the sdk was commited just to facilitate testing. Do not do this in production.
 
+# Testing
+Tests are made using nock to mock the response of API requests.
+
 # TODO
 - Add e2e tests
 - Map possible errors to correct status code

@@ -4,7 +4,7 @@ import { Movie } from "../types/Movie";
 
 export const mapMovieApiResponse = (responseData: APIResponse): Movie => {
   const data = responseData.docs
-  const movie = data.length > 0 ? data[0] : null
+  const movie = data?.length > 0 ? data[0] : null
   return movie ? {
     id: movie._id,
     name: movie.name,

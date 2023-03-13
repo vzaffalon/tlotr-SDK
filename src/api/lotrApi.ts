@@ -49,25 +49,27 @@ export const getMovieQuotesByName = async (
     retries,
     retryDelay
   )
-  const url = `${apiUrl}movie/${getMovieByNameResponse.data.movie.id}/quote`
-  const responseData = await fetchWithRetry(url, sdkKey, retries, retryDelay)
-
-  if (responseData.ok) {
-    const responseJson: APIResponse = await responseData.json()
-
-    console.log('LotrSdk: Sucessfully retrieved movie quotes')
-
-    return {
-      success: true,
-      data: {
-        quotes: mapMovieQuotesApiResponse(responseJson),
-      },
-      message: 'Sucessfully retrieved quote data',
+  if(getMovieByNameResponse.success){
+    const url = `${apiUrl}movie/${getMovieByNameResponse.data.movie.id}/quote`
+    const responseData = await fetchWithRetry(url, sdkKey, retries, retryDelay)
+  
+    if (responseData.ok) {
+      const responseJson: APIResponse = await responseData.json()
+  
+      console.log('LotrSdk: Sucessfully retrieved movie quotes')
+  
+      return {
+        success: true,
+        data: {
+          quotes: mapMovieQuotesApiResponse(responseJson),
+        },
+        message: 'Sucessfully retrieved quote data',
+      }
+    } else {
+      console.error(`LotrSdk: API request failed`)
+  
+      throw new Error(SDK_ERRORS.API_REQUEST_FAILED)
     }
-  } else {
-    console.error(`LotrSdk: API request failed`)
-
-    throw new Error(SDK_ERRORS.API_REQUEST_FAILED)
   }
 }
 

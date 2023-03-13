@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "start": "ts-node src/test.ts"
+    "start": "ts-node src/use-sdk.ts"
   },
   "keywords": [],
   "author": "",
