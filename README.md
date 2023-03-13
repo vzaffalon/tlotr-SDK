@@ -80,3 +80,13 @@ node-fetch: for making HTTP requests.
 
 # ENV variables
 The env variable for the sdk was commited just to facilitate testing. Do not do this in production.
+
+# TODO
+- Add e2e tests
+- Map possible errors to correct status code
+- Make tests to check API returning correct status code
+- Create variables to store messages
+- Add a better log library
+- Add a monitoring tool
+- Add CI/CD
+- Store sdk key more securely with secrets manager
