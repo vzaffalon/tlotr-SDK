@@ -18,9 +18,9 @@ Running test:
 ```npm test```
 
 # Deploy new version of package:
-change version in package.json
-compilte typescript with ```tsc```
-use ```npm publish```
+Change version in package.json
+compile typescript with ```tsc```
+and use ```npm publish```
 
 # Usage
 Importing:
