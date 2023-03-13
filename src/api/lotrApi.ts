@@ -3,7 +3,11 @@ import { mapMoviesApiResponse } from '../mappers/MoviesMapper'
 import { mapMovieQuotesApiResponse } from '../mappers/QuotesMapper'
 import { APIResponse } from '../types/ApiResponse'
 import { SDK_ERRORS } from '../types/SdkErrors'
-import { MovieSDKResponsePayload, MoviesSdkResponsePayload, QuotesSdkResponsePayload } from '../types/SdkResponse'
+import {
+  MovieSDKResponsePayload,
+  MoviesSdkResponsePayload,
+  QuotesSdkResponsePayload,
+} from '../types/SdkResponse'
 import { fetchWithRetry } from '../utils/fetchWithRetry'
 
 export const getMovieQuotes = async (
@@ -49,15 +53,15 @@ export const getMovieQuotesByName = async (
     retries,
     retryDelay
   )
-  if(getMovieByNameResponse.success){
+  if (getMovieByNameResponse.success) {
     const url = `${apiUrl}movie/${getMovieByNameResponse.data.movie.id}/quote`
     const responseData = await fetchWithRetry(url, sdkKey, retries, retryDelay)
-  
+
     if (responseData.ok) {
       const responseJson: APIResponse = await responseData.json()
-  
+
       console.log('LotrSdk: Sucessfully retrieved movie quotes')
-  
+
       return {
         success: true,
         data: {
@@ -67,7 +71,7 @@ export const getMovieQuotesByName = async (
       }
     } else {
       console.error(`LotrSdk: API request failed`)
-  
+
       throw new Error(SDK_ERRORS.API_REQUEST_FAILED)
     }
   }
