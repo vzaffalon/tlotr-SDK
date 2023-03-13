@@ -1,2 +1,2 @@
-import { LotrSdk } from 'tlotr-sdk'
+import { LotrSdk } from './src/sdk/LotrSdk'
 export { LotrSdk }

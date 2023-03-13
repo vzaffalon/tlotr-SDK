@@ -9,13 +9,17 @@ getMovieQuotesByName: retrieves quotes for a specific movie based on movieName.
 
 # Installation
 To install this SDK in your project, run the following command:
-npm install tlotr-sdk
+```npm install tlotr-sdk```
 
 To test the usage of the sdk a script was created, you can run it with:
-npm start -> in case of error make sure you installed the lotr-sdk before
+```npm start``` -> in case of error make sure you installed the lotr-sdk before
 
 Running test:
-npm test
+```npm test```
+
+Deploy new version of package:
+change version in package.json
+use ```npm publish```
 
 # Usage
 Importing:
